@@ -1,0 +1,58 @@
+---
+title: "Pastel"
+subtitle: "Brand Example"
+brand: _extensions/pastel/brand.yml
+format:
+  html:
+    theme:
+      light:
+        - brand
+        - _extensions/pastel/pastel.scss
+      dark:
+        - brand
+        - _extensions/pastel/pastel.scss
+---
+
+A box of soft pastels: six sticks, colourful and playful, each greyed back so it
+reads as chalk rather than as candy.
+Toggle the colour scheme to see the inversion: on light paper the pastels are
+tints and the deep hues carry the text, and on the dark ground the pastels
+become the ink.
+
+## Links and text
+
+A [link](https://github.com/mcanouil/quarto-pastel) is drawn in mint, deep on
+paper and chalk on night.
+
+## Tints
+
+::: {.callout-note}
+Note takes a sky wash behind Quarto's own left edge.
+:::
+
+::: {.callout-tip}
+Tip takes mint.
+:::
+
+::: {.callout-caution}
+Caution takes lemon.
+:::
+
+::: {.callout-important}
+Important takes coral.
+:::
+
+> A blockquote is washed in mint with a solid left edge.
+
+---
+
+| Stick | Pastel | Deep | Chalk |
+| --- | --- | --- | --- |
+| mint | `#A9DCC9` | `#1C7059` | `#9FD9C4` |
+| sky | `#A6C9E2` | `#1D6790` | `#9CC6E2` |
+| lemon | `#EFDDA0` | `#77620F` | `#E7D598` |
+| coral | `#EDAFA8` | `#A04238` | `#EBA9A1` |
+| peach | `#EFC6A3` | `#8E5720` | `#EAC09B` |
+| sage | `#C3D3A8` | `#566B2E` | `#BCCEA0` |
+
+: The six sticks. {.striped .hover}
