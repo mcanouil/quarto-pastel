@@ -10,4 +10,4 @@ repository-code: "https://github.com/mcanouil/quarto-pastel"
 url: "https://m.canouil.dev/quarto-pastel/"
 license: "MIT License"
 date-released: "2026-07-31"
-version: 0.0.0
+version: 0.1.0
