@@ -63,7 +63,7 @@ It has no effect on PDF, Typst, or Word.
 
 ## Example
 
-Here is the source code for a minimal example: [example.qmd](example.qmd).
+Here is the source code for a minimal example: [`example.qmd`](example.qmd).
 
 Rendered output:
 
