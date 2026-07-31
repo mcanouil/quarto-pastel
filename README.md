@@ -5,7 +5,7 @@ A shared pastel identity for the Quarto extension documentation websites: a box 
 ## Installation
 
 ```bash
-quarto add mcanouil/quarto-pastel@0.1.0
+quarto add mcanouil/quarto-pastel@0.2.0
 ```
 
 This will install the extension under the `_extensions` subdirectory.
