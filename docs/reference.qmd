@@ -1,0 +1,67 @@
+---
+title: "Reference"
+subtitle: "The palette, and where each colour may be used."
+description: "The complete pastel brand: the six sticks with their contrast measurements, the roles they fill, and what the stylesheet styles."
+---
+
+## Enabling it
+
+```yaml
+brand: _extensions/mcanouil/pastel/brand.yml
+format:
+  atelier-html:
+    theme:
+      light:
+        - brand
+        - _extensions/mcanouil/pastel/pastel.scss
+      dark:
+        - brand
+        - _extensions/mcanouil/pastel/pastel.scss
+```
+
+`brand` gives Quarto the palette; the stylesheet is what spends it.
+Both schemes take the same stylesheet, which resolves the light and dark values itself.
+
+## The palette
+
+Six sticks, each with a pastel for fills, a deep mix for text and links on light paper, and a chalk value for dark mode.
+
+| Stick | Pastel | Deep | Chalk | Link, light | Link, dark |
+| --- | --- | --- | --- | --- | --- |
+| mint | `#A9DCC9` | `#1C7059` | `#9FD9C4` | 5.31 | 10.75 |
+| sky | `#A6C9E2` | `#1D6790` | `#9CC6E2` | 5.49 | 9.44 |
+| lemon | `#EFDDA0` | `#77620F` | `#E7D598` | 5.27 | 11.71 |
+| coral | `#EDAFA8` | `#A04238` | `#EBA9A1` | 5.60 | 8.74 |
+| peach | `#EFC6A3` | `#8E5720` | `#EAC09B` | 5.27 | 10.20 |
+| sage | `#C3D3A8` | `#566B2E` | `#BCCEA0` | 5.27 | 10.16 |
+
+: The six sticks and their contrast ratios. {.striped .hover tbl-colwidths="[14,16,16,16,19,19]"}
+
+Body text reaches 12.75 on light paper and 14.16 on night, both AAA.
+
+Mint carries `primary`, so a link never competes with the coral and peach that carry status.
+
+::: {.callout-important}
+The pastels measure 1.20 to 1.65 against the light paper.
+In the light scheme they are fills and tints only: never text, and never a border that has to be seen for the page to work.
+
+In dark mode the pastel is the ink, which makes the dark scheme the more colourful of the two.
+:::
+
+## What the stylesheet styles
+
+`brand.yml` alone gives a palette and nothing else.
+`pastel.scss` applies it to:
+
+- the paper, including its tooth;
+- headings, each hue in turn;
+- inline code, with a blush behind it;
+- callouts, tabsets, tables, and blockquotes, as tints;
+- the table of contents panel, tinted, with a real active state.
+
+The page chrome, meaning the navbar, the footer, and the docked sidebar, is left to [atelier](https://m.canouil.dev/quarto-atelier), which derives it from the same brand from 0.9.0 onwards.
+
+## Limitations
+
+- HTML output only. PDF, Typst, and Word are unaffected.
+- The stylesheet assumes atelier for the chrome; used with another theme, the page body is styled and the chrome is not.
