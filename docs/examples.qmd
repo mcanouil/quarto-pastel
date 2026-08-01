@@ -45,9 +45,11 @@ And an important, which is where the strongest of them is spent.
 | Stick | Role |
 | --- | --- |
 | mint | `primary`, so links and the active state |
-| coral | status, warnings |
-| peach | status, cautions |
-| sky, lemon, sage | headings, fills, tints |
+| sky | `secondary` and `info` |
+| lemon | `tertiary`, and the table header tint |
+| sage | `success` |
+| peach | `warning` |
+| coral | `danger` |
 
 : Striped and hovered rows are tinted rather than greyed. {.striped .hover tbl-colwidths="[30,70]"}
 
@@ -57,7 +59,7 @@ And an important, which is where the strongest of them is spent.
 
 ## Code blocks
 
-```r
+```{.r filename="analysis.R"}
 x <- seq_len(10)
 mean(x)
 ```

@@ -22,6 +22,20 @@ format:
 `brand` gives Quarto the palette; the stylesheet is what spends it.
 Both schemes take the same stylesheet, which resolves the light and dark values itself.
 
+The extension contributes `project.brand` as well, so a project that adds it and names no `brand` of its own still gets the palette.
+Naming it is what lets a project put another brand first, and what these sites do.
+
+## Sass variables
+
+Two knobs, set in a stylesheet loaded before `pastel.scss`:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `$pastel-tint-alpha` | `0.28` | Strength of the pastel washes behind callouts, tabsets, tables, and quotes. Individual surfaces scale it rather than replacing it. |
+| `$pastel-grain-opacity` | `0.07` | Opacity of the paper tooth. `0` turns the grain off. |
+
+: The stylesheet's Sass variables. {.striped .hover tbl-colwidths="[26,12,62]"}
+
 ## The palette
 
 Six sticks, each with a pastel for fills, a deep mix for text and links on light paper, and a chalk value for dark mode.
@@ -39,7 +53,20 @@ Six sticks, each with a pastel for fills, a deep mix for text and links on light
 
 Body text reaches 12.75 on light paper and 14.16 on night, both AAA.
 
-Mint carries `primary`, so a link never competes with the coral and peach that carry status.
+Each stick also carries one of Bootstrap's semantic roles.
+
+| Role | Stick |
+| --- | --- |
+| `primary` | mint |
+| `secondary`, `info` | sky |
+| `tertiary` | lemon |
+| `success` | sage |
+| `warning` | peach |
+| `danger` | coral |
+
+: The semantic roles and the sticks that carry them. {.striped .hover tbl-colwidths="[42,58]"}
+
+Mint carries `primary`, so a link never competes with the peach and coral that carry status.
 
 ::: {.callout-important}
 The pastels measure 1.20 to 1.65 against the light paper.
