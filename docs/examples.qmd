@@ -1,0 +1,77 @@
+---
+title: "Examples"
+subtitle: "The palette, as the stylesheet spends it."
+description: "The pastel brand in use across headings, code, callouts, tables, and quotes, on the site it themes."
+---
+
+This site is themed by the extension, so the page around you is the example.
+Switch between the light and dark schemes to see the relationship invert.
+
+## Headings
+
+The headings on this page take the hues in turn.
+That is the stylesheet, not a class: nothing here is marked up for colour.
+
+## Inline code and links
+
+Inline code such as `brand.yml` carries a blush behind it, and a [link](https://quarto.org) takes the deep mint that `primary` resolves to.
+
+On light paper the deep mixes carry the text; in dark mode the chalk values do.
+
+## Callouts
+
+::: {.callout-note}
+A note, tinted with one stick.
+:::
+
+::: {.callout-tip}
+A tip, with another.
+:::
+
+::: {.callout-warning}
+A warning, in the colour that carries that meaning.
+:::
+
+::: {.callout-caution}
+A caution.
+:::
+
+::: {.callout-important}
+And an important, which is where the strongest of them is spent.
+:::
+
+## Tables
+
+| Stick | Role |
+| --- | --- |
+| mint | `primary`, so links and the active state |
+| sky | `secondary` and `info` |
+| lemon | `tertiary`, and the table header tint |
+| sage | `success` |
+| peach | `warning` |
+| coral | `danger` |
+
+: Striped and hovered rows are tinted rather than greyed. {.striped .hover tbl-colwidths="[30,70]"}
+
+## Quotes
+
+> A blockquote takes a tint and a rule in the same family, rather than the default grey.
+
+## Code blocks
+
+```{.r filename="analysis.R"}
+x <- seq_len(10)
+mean(x)
+```
+
+The window chrome is [code-window](https://m.canouil.dev/quarto-code-window); the colours in it are this brand.
+
+## The one rule, illustrated
+
+A pastel on light paper measures between 1.20 and 1.65, which is why every coloured thing above is a fill or a tint, and every piece of text that sits on the paper uses a deep mix instead.
+
+Dark mode inverts that: there the pastel is the ink, and the scheme is the more colourful of the two.
+
+## Source
+
+The repository ships a short, standalone starting point you can copy: [`example.qmd`](https://github.com/mcanouil/quarto-pastel/blob/main/example.qmd).

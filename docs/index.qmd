@@ -1,0 +1,80 @@
+---
+title: "Pastel"
+subtitle: "A chalk palette on toned stone paper."
+description: "What the pastel brand gives a Quarto site, how to point a project at it, and where its colours may and may not be used."
+authors:
+  - name: "Mickaël CANOUIL, _Ph.D._"
+    orcid: "0000-0002-3396-4549"
+    url: "https://mickael.canouil.fr"
+---
+
+A palette of two or three colours reads as corporate; a palette of six bright ones reads as a toy.
+
+`pastel` is six sticks greyed back to roughly a fifth or a third of full saturation, so the family stays cheerful and still reads as chalk.
+It ships as a `brand.yml` and a stylesheet: the first gives the colours, the second spends them across the page.
+
+The site you are reading is themed by it.
+
+## Installation
+
+```bash
+quarto add {{< var extension.reference >}}
+```
+
+This will install the extension under the `_extensions` subdirectory.
+If you are using version control, you will want to check in this directory.
+
+Or install it from your editor with [Quarto Wizard](https://m.canouil.dev/quarto-wizard):
+
+::: {.btn-group role="group" aria-label="Quarto Wizard installer options"}
+
+[Visual Studio Code](vscode://mcanouil.quarto-wizard/install?repo={{< var extension.wizard-reference >}}){.btn .btn-outline-primary title="Install {{< var extension.reference >}} in Visual Studio Code using the Quarto Wizard extension."}
+[Positron](positron://mcanouil.quarto-wizard/install?repo={{< var extension.wizard-reference >}}){.btn .btn-outline-primary title="Install {{< var extension.reference >}} in Positron using the Quarto Wizard extension."}
+[VSCodium](vscodium://mcanouil.quarto-wizard/install?repo={{< var extension.wizard-reference >}}){.btn .btn-outline-primary title="Install {{< var extension.reference >}} in VSCodium using the Quarto Wizard extension."}
+
+:::
+
+## Quick start
+
+Point the project at the brand, and add the stylesheet to both schemes:
+
+```yaml
+brand: _extensions/mcanouil/pastel/brand.yml
+format:
+  atelier-html:
+    theme:
+      light:
+        - brand
+        - _extensions/mcanouil/pastel/pastel.scss
+      dark:
+        - brand
+        - _extensions/mcanouil/pastel/pastel.scss
+```
+
+`brand.yml` alone gives the palette.
+`pastel.scss` spends it: the paper tooth, the heading hues, the inline-code blush, the callout, tabset, table, and blockquote tints, and a tinted contents panel with a real active state.
+
+The page chrome is left to [atelier](https://m.canouil.dev/quarto-atelier), which derives the navbar, footer, and docked sidebar from the same brand.
+
+## The one rule
+
+::: {.callout-important}
+The pastels measure between 1.20 and 1.65 against the light paper, which is below even the 3:1 asked of interface elements.
+
+In the light scheme they are decoration only: fills and tints, never text, and never a border the page depends on.
+In dark mode the relationship inverts and the pastels become the ink.
+:::
+
+See the [Reference](reference.qmd) for the palette and its measurements, and the [Examples](examples.qmd) for the colours in use.
+
+## Where it works
+
+HTML output.
+It has no effect on PDF, Typst, or Word.
+
+## Links
+
+- [Reference](reference.qmd) for the palette, the contrast figures, and the roles.
+- [Examples](examples.qmd) for the colours as the stylesheet spends them.
+- [Changelog](changelog.qmd) for what each release changed.
+- [Source and issues](https://github.com/mcanouil/quarto-pastel) on GitHub.
