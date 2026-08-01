@@ -70,7 +70,7 @@ website:
 # Resolved from the copy sync-extension.sh takes from the repository root,
 # not from a committed dependency: this repository publishes pastel, so the
 # site is themed by the version being released.
-brand: _extensions/pastel/brand.yml
+brand: _extensions/local/pastel/brand.yml
 
 format:
   # Configure the extension format by name. Declaring `html` would replace
@@ -80,11 +80,11 @@ format:
     theme:
       light:
         - brand
-        - _extensions/pastel/pastel.scss
+        - _extensions/local/pastel/pastel.scss
         - assets/theme.scss
       dark:
         - brand
-        - _extensions/pastel/pastel.scss
+        - _extensions/local/pastel/pastel.scss
         - assets/theme.scss
 
 filters:
